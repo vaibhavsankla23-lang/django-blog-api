@@ -3,6 +3,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "cd portfolio_backend && python manage.py migrate && python manage.py createsuperuser --noinput && gunicorn portfolio_backend.wsgi"
+    "startCommand": "cd portfolio_backend && python manage.py migrate && python manage.py shell -c \"from django.contrib.auth.models import User; User.objects.filter(username='vaibh').delete(); User.objects.create_superuser('vaibh', 'vaibh@gmail.com', 'Vaibh@123')\" && gunicorn portfolio_backend.wsgi"
   }
 }
