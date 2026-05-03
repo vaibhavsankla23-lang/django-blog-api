@@ -1,0 +1,9 @@
+{
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "cd portfolio_backend && gunicorn portfolio_backend.wsgi",
+    "healthcheckPath": "/api/"
+  }
+}
