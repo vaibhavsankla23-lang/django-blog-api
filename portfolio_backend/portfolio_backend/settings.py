@@ -10,6 +10,10 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-blog-api-production.up.railway.app',
+]
+
 INSTALLED_APPS = [
     'portfolio',
     'django.contrib.admin',
