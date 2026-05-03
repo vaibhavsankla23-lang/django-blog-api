@@ -3,7 +3,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "cd portfolio_backend && gunicorn portfolio_backend.wsgi",
+    "startCommand": "cd portfolio_backend && python manage.py migrate && gunicorn portfolio_backend.wsgi",
     "healthcheckPath": "/api/"
   }
 }
