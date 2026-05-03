@@ -1,0 +1,8 @@
+{% if posts %}
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+{% else %}
+    <p>No projects added yet</p>
+{% endif %}
